@@ -34,7 +34,7 @@ public class BookingController {
 
     @GetMapping("/byUsername/{username}")
     public List<BookingDetail> getAllBooking(@PathVariable String username) {
-        return (List<BookingDetail>) this.bookingRepository.findByUsername(username);
+        return (List<BookingDetail>) this.bookingService.getAllBooking(username);
     }
 
 }
